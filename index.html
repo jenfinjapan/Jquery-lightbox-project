@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Winter in Norway | Photo gallery</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Abhaya+Libre|Open+Sans:300i|Libre+Baskerville:700|Droid+Serif:700" rel="stylesheet">
+  </head>
+  <body>
+    <header>
+      <div class="container header">
+        <div class="title">Winter in Norway</div>
+        <div class="searchbox">
+          <form action="index.html" method="post">
+            <input type="text" id="search" placeholder="Search for an image">
+          </form>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <section class="blurb">
+          <p>Winter is a special time in Norway. Short days but stunning sunrises and sunsets. Lots of snow and ice, but everyday is different. From bright sun to grey skies, here are some of my favourite moments. </p>
+      </section>
+      <main class="gallery">
+        <a href="img/photos/01.jpg" class="fancybox" title="At the end of autumn in late October,  I discovered these beautiful leaves covered in ice on a hike through the mountains."><img src="img/photos/thumbnails/01.jpg" /></a>
+        <a href="img/photos/02.jpg" class="fancybox" title="The first snow came to Asker earlier than anticipated."><img src="img/photos/thumbnails/02.jpg" /></a>
+        <a href="img/photos/03.jpg" class="fancybox" title="We hiked up to Smavannsbu and discovered perfect snow for making an igloo."><img src="img/photos/thumbnails/03.jpg" /></a>
+        <a href="img/photos/04.jpg" class="fancybox" title="The lake at Drengrudsvanna started to freeze over and there was a little tree in the middle on an island of snow."><img src="img/photos/thumbnails/04.jpg" /></a>
+        <a href="img/photos/05.jpg" class="fancybox" title="During the winter months in Norway the sunrises are long and spectacular."><img src="img/photos/thumbnails/05.jpg" /></a>
+        <a href="img/photos/06.jpg" class="fancybox" title="Another hike to the top of Furuåsen gave us a spectacular view over the Oslo fjord."><img src="img/photos/thumbnails/06.jpg" /></a>
+        <a href="img/photos/07.jpg" class="fancybox" title="Cross country skiing at Eid."><img src="img/photos/thumbnails/07.jpg" /></a>
+        <a href="img/photos/08.jpg" class="fancybox" title="Out hunting for a real Christmas tree."><img src="img/photos/thumbnails/08.jpg" /></a>
+        <a href="img/photos/09.jpg" class="fancybox" title="We too the train up to Geilo for a hit of slalom but surprisingly there was very little snow."><img src="img/photos/thumbnails/09.jpg" /></a>
+        <a href="img/photos/10.jpg" class="fancybox" title="Another photo in beautiful but snowless Geilo."><img src="img/photos/thumbnails/10.jpg" /></a>
+        <a href="img/photos/11.jpg" class="fancybox" title="New Years Day and the sun has just got up with the mountains of Bergen shrouded in clouds."><img src="img/photos/thumbnails/11.jpg" /></a>
+        <a href="img/photos/12.jpg" class="fancybox" title="Semsvann is frozen and people are able to cross the lake."><img src="img/photos/thumbnails/12.jpg" /></a>
+        <a href="img/photos/13.jpg" class="fancybox" title="A beautiful sunset after a fantastic day of slalom skiing at Oslo Vinterpark."><img src="img/photos/thumbnails/13.jpg" /></a>
+        <a href="img/photos/14.jpg" class="fancybox" title="A combination of high humidity and low temperatures have made icicles freeze on the trees - they look like spring blossoms."><img src="img/photos/thumbnails/14.jpg" /></a>
+        <a href="img/photos/15.jpg" class="fancybox" title="An early morning hike with a lovely view over the frozen trees up to Oslo Vinterpark."><img src="img/photos/thumbnails/15.jpg" /></a>
+        <a href="img/photos/16.jpg" class="fancybox" title="Another killer sunrise with the clouds hanging low on the partially frozen Oslo fjord."><img src="img/photos/thumbnails/16.jpg" /></a>
+        <div class="emptyContainer"><span></span></div>
+      </main>
+       
+    </div>
+    <footer>
+        <div class="container social-container">
+          <p>See more of my photos on<br><a href="http://instagram.com/jenfinjapan" title="Instagram" target="_blank"><img src="img/instagram.svg" alt="Instagram"></a></p>
+          
+          <p class="copyright">&#169; Jennifer Fagan 2017</p>
+        </div>
+      </footer>
+    
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/fancybox/jquery.fancybox.js"></script>
+    <script>
+        $("a[href$='.jpg']").attr('rel', 'gallery').fancybox();
+        $('.fancybox').fancybox({
+            afterClose : function() {
+                location.reload();
+                return;
+            },
+            openEffect  : 'fade',
+            closeEffect : 'fade',
+            nextEffect : 'fade',
+            prevEffect : 'fade',
+            closeBtn: true,
+            arrows: true,
+            helpers : {
+              title: {
+                type: 'inside'
+              }
+            }
+          
+       });
+    </script>
+    <script src="js/search.js"></script>
+  </body>
+</html>
